@@ -11,7 +11,7 @@ export const heroData: HeroData = {
   greeting: "Hi, I'm",
   name: "Wiam EL Khammal",
   title: "Hi , I'm Wiam EL Khammal",
-  subtitle: "Software Engineer | Full Stack Developer ",
+  subtitle: "Full Stack Developer ",
   description: "Recent graduate in Information Systems Engineering and Digital Transformation, with experience building full-stack applications. Skilled in process automation, creating user-friendly interfaces, and delivering impactful digital solutions using modern web and mobile technologies.",
   quote: "Form follows function.",
   cta: {

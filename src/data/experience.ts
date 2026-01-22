@@ -9,7 +9,7 @@ export const experienceData: ExperienceEntry[] = [
   {
     id: "um6p-intern-2025",
     title: "Full-Stack Developer Intern",
-    company: "UM6P (Mohammed VI Polytechnic University )",
+    company: "UM6P",
     location: "Benguerir, Morocco",
     logo: "/img/experience/um6p.png", // Ensure this exists in public/img/experience/
     startDate: "Feb 2025",
@@ -34,7 +34,7 @@ export const experienceData: ExperienceEntry[] = [
   {
     id: "um6p-intern-2024",
     title: "Full-Stack Developer Intern",
-    company: "UM6P (Mohammed VI Polytechnic University )",
+    company: "UM6P ",
     location: "Benguerir, Morocco",
     logo: "/img/experience/um6p.png",
     startDate: "Jul 2024",
@@ -59,7 +59,7 @@ export const experienceData: ExperienceEntry[] = [
   {
     id: "um6p-intern-2023",
     title: "Web Developer Intern",
-    company: "UM6P (Mohammed VI Polytechnic University )",
+    company: "UM6P",
     location: "Benguerir, Morocco",
     logo: "/img/experience/um6p.png",
     startDate: "Jul 2023",
