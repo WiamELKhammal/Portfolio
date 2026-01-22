@@ -322,20 +322,19 @@ const downloadFileName = downloadLink?.split("/").pop();
   }
 
   @media (max-width: 480px) {
-    .hero {
-      min-height: 55vh;
+    #role-typer {
+      white-space: normal !important;
+      max-width: none !important;
+      animation: none !important;
+      border-right: none !important;
+      display: block;
+      text-align: center;
     }
 
-    .hero h1 {
-      font-size: clamp(1.6rem, 1rem + 2vw, 2rem);
-    }
-
-    .hero-description {
-      font-size: 0.95rem;
-    }
-
-    .hero-quote {
-      font-size: 0.8rem;
+    .hero-role {
+      /* Center the block since the cursor is gone */
+      justify-content: center;
+      width: 100%;
     }
   }
 </style>
