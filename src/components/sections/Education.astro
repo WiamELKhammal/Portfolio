@@ -194,11 +194,15 @@ const displayedEducation = limit > 0 ? education.slice(0, limit) : education;
     color: var(--text);
   }
 
-  /* Description list */
-  .card-list {
-    margin: 0.5rem 0 1rem 1.2rem;
-    padding: 0;
-    list-style: disc;
+/* Description list */
+  .card-list li {
+    margin: 0.35rem 0;
+    line-height: 1.55;
+    color: var(--text);
+    font-size: 0.925rem;
+    
+    text-align: justify;
+    hyphens: auto;
   }
 
   .card-list li {
