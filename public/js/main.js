@@ -38,8 +38,8 @@
   function updateCvLinks(lang) {
     const links = document.querySelectorAll('.btn-download[href]');
     const href = lang === 'fr'
-      ? '/cv/CV_FR_Killian_Chandeze_Sofware_Engineer.pdf'
-      : '/cv/CV_EN_Killian_Chandeze_Sofware_Engineer.pdf';
+      ? '/cv/CV_EN_WIAM_EL_KHAMMAL_FULL_STACK_DEV.pdf'
+      : '/cv/CV_EN_WIAM_EL_KHAMMAL_FULL_STACK_DEV.pdf';
     links.forEach(a => {
       a.setAttribute('href', href);
       a.setAttribute('download', href.split('/').pop());

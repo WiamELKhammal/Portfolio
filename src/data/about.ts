@@ -21,7 +21,7 @@ export const heroData: HeroData = {
     },
     secondary: {
       text: "Download CV",
-      href: "/cv/CV_EN_Wiam_EL_Khammal_Software_Engineer.pdf",
+      href: "/cv/CV_EN_WIAM_EL_KHAMMAL_FULL_STACK_DEV.pdf",
       download: true,
     },
   },
