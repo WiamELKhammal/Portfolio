@@ -58,17 +58,14 @@ const hasMoreExperiences = hiddenExperiences.length > 0;
           </ul>
 
           {job.skills.length > 0 && (
-            <div class="kw-list">
-              {job.skills.map((skill) => (
-                <Badge variant="default" size="sm" hoverable>
-                  <div class="skill-badge-content">
-                    <img src={getSkillLogo(skill)} alt="" class="skill-icon" onerror="this.style.display='none'"/>
-                    {skill}
-                  </div>
-                </Badge>
-              ))}
-            </div>
-          )}
+  <div class="kw-list">
+    {job.skills.map((skill) => (
+      <Badge variant="default" size="sm" hoverable>
+        {skill}
+      </Badge>
+    ))}
+  </div>
+)}
         </Card>
       ))}
     </div>
