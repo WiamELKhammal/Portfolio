@@ -244,6 +244,30 @@ const displayedEducation = limit > 0 ? education.slice(0, limit) : education;
     border-color: var(--text);
     color: var(--text);
   }
+  .card-list {
+    margin: 1rem 0 1rem 1.5rem; 
+    padding: 0;
+    list-style-type: disc !important; /* Force the dot shape */
+  }
+
+  .card-list li {
+    display: list-item !important; /* Force the dot to show up */
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: var(--text);
+    text-align: justify;
+    hyphens: auto;
+  }
+
+/* Default (Light Mode) */
+.card-list li::marker {
+  color: black;
+}
+
+/* Dark Mode override */
+:global([data-theme="dark"]) .card-list li::marker {
+  color: white;
+}
 
   /* Responsive adjustments */
   @media (max-width: 768px) {
