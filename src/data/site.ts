@@ -10,7 +10,7 @@ export const siteConfig: SiteConfig = {
   name: "Wiam EL Khammal",
   title: "Portfolio - Wiam EL Khammal",
   description:
-    "Full-Stack Software Engineer — specializing in MERN stack and Spring Boot architecture. Clean, minimal portfolio showcasing scalable systems and professional experience.",
+    "Full-Stack Software Engineer — Building robust, end-to-end applications from database architecture to responsive user interfaces. Focused on creating scalable, clean, and user-centric digital solutions.",
   url: "https://wiamelkhammal.dev", // Update this when you deploy
   author: "Wiam EL Khammal",
   email: "elkhammalwiam@gmail.com",
