@@ -116,6 +116,16 @@ const formattedHighlights =
     gap: 28px;
     align-items: center;
   }
+  /* Light mode override for Open to Work status */
+:global([data-theme="light"]) .work-status-asm {
+  color: #000000;
+  background: var(--card); /* Or any light-themed background variable you use */
+  border-color: var(--border);
+}
+
+:global([data-theme="light"]) .work-status-asm:hover {
+  background: color-mix(in oklab, #22c55e 10%, var(--card));
+}
 .work-status-asm {
   display: inline-flex;
   align-items: center;
