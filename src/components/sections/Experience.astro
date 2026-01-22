@@ -1,0 +1,252 @@
+---
+// src/components/sections/Experience.astro
+import Section from "../common/Section.astro";
+import Card from "../common/Card.astro";
+import Badge from "../common/Badge.astro";
+import { experienceData } from "../../data/experience";
+import { getSkillLogo } from "../../data/skills"; // Import this helper
+import type { ExperienceEntry } from "../../types";
+
+export interface Props {
+  experiences?: ExperienceEntry[];
+  initialCount?: number;
+  class?: string;
+}
+
+const {
+  experiences = experienceData,
+  initialCount = 3,
+  class: className = "",
+} = Astro.props;
+
+const visibleExperiences = experiences.slice(0, initialCount);
+const hiddenExperiences = experiences.slice(initialCount);
+const hasMoreExperiences = hiddenExperiences.length > 0;
+---
+
+
+
+<Section id="experience" title="Professional Experience" class={className}>
+  <div class="experience-container">
+    <div class="experience-list">
+      {visibleExperiences.map((job) => (
+        <Card hoverable class="experience-card">
+          <header class="card-head">
+            <div class="meta-left">
+              {job.logo && (
+                <div class="company-logo-wrapper">
+                  <img src={job.logo} alt={`${job.company} logo`} class="company-logo" />
+                </div>
+              )}
+              <div class="title-meta">
+                <h3>{job.title}</h3>
+                <div class="meta-line">
+                  <i class="fa-sharp fa-solid fa-location-dot" aria-hidden="true" />
+                  <span>{job.location}</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="meta-right">
+              <div class="org-badge">{job.company}</div>
+              <div class="meta-date">{job.startDate} — {job.endDate}</div>
+            </div>
+          </header>
+
+          <ul class="card-list">
+            {job.description.map((item) => (<li>{item}</li>))}
+          </ul>
+
+          {job.skills.length > 0 && (
+            <div class="kw-list">
+              {job.skills.map((skill) => (
+                <Badge variant="default" size="sm" hoverable>
+                  <div class="skill-badge-content">
+                    <img src={getSkillLogo(skill)} alt="" class="skill-icon" onerror="this.style.display='none'"/>
+                    {skill}
+                  </div>
+                </Badge>
+              ))}
+            </div>
+          )}
+        </Card>
+      ))}
+    </div>
+
+    </div>
+</Section>
+
+<style>
+  /* --- Header Layout --- */
+  .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .meta-left {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex: 1;
+  }
+
+  .company-logo-wrapper {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    background: white;
+    border-radius: 8px; /* Slightly tighter corner */
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    /* Shadow Removed */
+    box-shadow: none; 
+  }
+
+  .company-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .title-meta h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text);
+    line-height: 1.2;
+  }
+
+  /* --- Description List (Bullet Points) --- */
+  .card-list {
+    margin: 1rem 0 1.5rem 1.5rem; /* Left margin allows bullets to breathe */
+    padding: 0;
+    list-style-type: disc; /* Force bullet points */
+  }
+
+  .card-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: var(--text-muted); /* or var(--text) depending on your theme */
+    display: list-item; /* Ensures bullet behavior */
+  }
+
+  /* Optional: Color the bullet point itself */
+  .card-list li::marker {
+    color: var(--accent); /* Or var(--muted) if you want them subtle */
+  }
+
+  /* --- Skill Badges --- */
+  .skill-badge-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .skill-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+  }
+
+  /* --- Other Styles --- */
+  .meta-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    gap: 0.4rem;
+  }
+
+  .org-badge {
+    padding: 0.25rem 0.6rem;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .kw-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .card-head { flex-direction: column; gap: 1rem; }
+    .meta-right { align-items: flex-start; text-align: left; }
+    .meta-left { align-items: flex-start; }
+    .card-list { margin-left: 1.2rem; }
+  }
+</style>
+
+<script>
+  // Experience toggle functionality
+  function initExperienceToggle() {
+    const toggleBtn = document.getElementById(
+      "experience-toggle",
+    ) as HTMLButtonElement;
+    const extraSection = document.getElementById("experience-extra");
+
+    if (!toggleBtn || !extraSection) {
+      return;
+    }
+
+    // Get text values from data attributes
+    const moreText = toggleBtn.getAttribute("data-more-text") || "Show More";
+    const lessText = toggleBtn.getAttribute("data-less-text") || "Show Less";
+    const textSpan = toggleBtn.querySelector(".toggle-text");
+
+    // Set initial state
+    let isExpanded = false;
+
+    // Handle click
+    toggleBtn.addEventListener("click", function () {
+      isExpanded = !isExpanded;
+
+      if (isExpanded) {
+        // Expand
+        extraSection.setAttribute("data-collapsed", "false");
+        toggleBtn.classList.add("expanded");
+        if (textSpan) {
+          textSpan.textContent = lessText;
+        }
+      } else {
+        // Collapse
+        extraSection.setAttribute("data-collapsed", "true");
+        toggleBtn.classList.remove("expanded");
+        if (textSpan) {
+          textSpan.textContent = moreText;
+        }
+
+        // Scroll back to experience section
+        const experienceSection = document.getElementById("experience");
+        if (experienceSection) {
+          setTimeout(() => {
+            experienceSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }, 100);
+        }
+      }
+    });
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initExperienceToggle);
+  } else {
+    initExperienceToggle();
+  }
+
+  // Also initialize on Astro page transitions (View Transitions API)
+  document.addEventListener("astro:page-load", initExperienceToggle);
+</script>

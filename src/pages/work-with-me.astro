@@ -1,0 +1,241 @@
+---
+// src/pages/work-with-me.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/services.css";
+
+// Set up page metadata
+const pageTitle = "Work with me — Wiam EL Khammal";
+const pageDescription =
+  "Collaborate with Wiam EL Khammal — Software Engineer focused on building resilient, scalable systems and clean architecture.";
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  canonical="https://wiamelkhammal.dev/work-with-me"
+>
+  <section
+    class="hero section container service-hero"
+    aria-label="Work with me overview"
+  >
+    <div class="hero-content">
+      <div class="hero-tagline reveal">
+        <p class="hero-quote lead-quote design-quote">
+           <span class="quote-mark open">"</span>Code is poetry, architecture is symphony.<span class="quote-mark close">"</span> 
+        </p>
+      </div>
+      <h1 class="reveal defer-on-scroll">Work with me</h1>
+      <p class="muted reveal delay-1">
+        I'm a passionate Software Engineer who believes in crafting digital
+        solutions that stand the test of time. My work is guided by the
+        principles of clean architecture, high-performance optimization, and
+        designing systems that are as scalable as they are maintainable.
+      </p>
+      <div class="hero-cta reveal delay-2">
+        <a class="btn" href="#approach">My approach</a>
+        <a class="btn ghost" href="/#contact">Let's collaborate</a>
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="approach"
+    class="section container service-intro"
+    aria-labelledby="approach-title"
+  >
+    <h2 id="approach-title" class="section-title reveal">
+      My development philosophy
+    </h2>
+    <div class="service-intro-grid reveal delay-1">
+      <div class="service-intro-copy">
+        <p class="lead">
+          I approach software development with technical rigor and a focus on
+          sustainable solutions. My work emphasizes clean architecture, scalable
+          design, and maintainable systems that solve complex problems.
+        </p>
+        <ul class="service-commitments">
+          <li>
+            <span class="bullet"></span>Domain-driven design with clean
+            architecture principles
+          </li>
+          <li>
+            <span class="bullet"></span>Test-driven development for bulletproof
+            reliability
+          </li>
+          <li>
+            <span class="bullet"></span>Performance-first mindset with
+            continuous optimization
+          </li>
+          <li>
+            <span class="bullet"></span>Collaborative approach with clear
+            communication
+          </li>
+        </ul>
+      </div>
+      <aside class="service-intro-aside">
+        <div class="service-glow-card">
+          <h3>What drives me</h3>
+          <ul>
+            <li>Building systems that developers love to work with</li>
+            <li>Solving complex problems with elegant solutions</li>
+            <li>Continuous learning and knowledge sharing</li>
+            <li>Staying at the forefront of technical innovation</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section
+    id="expertise"
+    class="section container service-block"
+    aria-labelledby="expertise-title"
+  >
+    <div class="section-heading reveal">
+      <span class="section-kicker">Core Expertise</span>
+      <h2 id="expertise-title" class="section-title">
+        Full-Stack Software Engineering
+      </h2>
+      <p class="muted">
+        I specialize in building robust, scalable applications that solve
+        real business problems. Whether it's microservices or monolithic
+        systems, I deliver solutions designed for performance, reliability, and
+        long-term maintainability.
+      </p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card" data-tone="blue">
+        <header>
+          <span class="service-icon"
+            ><i class="fa-solid fa-layer-group"></i></span
+          >
+          <h3>Clean Architecture & DDD</h3>
+        </header>
+        <p>
+          I design systems using Domain-Driven Design principles, creating
+          maintainable codebases that reflect your business logic clearly and
+          evolve gracefully over time.
+        </p>
+        <ul>
+          <li>Hexagonal architecture with clear boundaries</li>
+          <li>CQRS and Event Sourcing patterns</li>
+          <li>Strategic domain modeling</li>
+          <li>Vertical slice architecture for feature isolation</li>
+        </ul>
+      </article>
+      <article class="service-card" data-tone="cyan">
+        <header>
+          <span class="service-icon"
+            ><i class="fa-solid fa-gauge-high"></i></span
+          >
+          <h3>Performance Engineering</h3>
+        </header>
+        <p>
+          Performance isn't an afterthought—it's built into every decision. I
+          optimize at every layer, from algorithms to database queries, ensuring
+          your applications scale efficiently.
+        </p>
+        <ul>
+          <li>Memory management and resource optimization</li>
+          <li>Async/await patterns and parallel processing</li>
+          <li>Database optimization and query performance</li>
+          <li>System profiling and benchmarking</li>
+        </ul>
+      </article>
+      <article class="service-card" data-tone="indigo">
+        <header>
+          <span class="service-icon"
+            ><i class="fa-solid fa-code-branch"></i></span
+          >
+          <h3>Modern Engineering Practices</h3>
+        </header>
+        <p>
+          I stay current with the latest tech innovations, leveraging
+          cutting-edge features while maintaining stability for production systems.
+        </p>
+        <ul>
+          <li>Full-stack development lifecycle</li>
+          <li>Advanced API design patterns</li>
+          <li>Dependency injection and service lifetimes</li>
+          <li>Scalable backend infrastructure</li>
+        </ul>
+      </article>
+      <article class="service-card" data-tone="green">
+        <header>
+          <span class="service-icon"
+            ><i class="fa-solid fa-shield-halved"></i></span
+          >
+          <h3>Security & Reliability</h3>
+        </header>
+        <p>
+          Security is paramount. I implement defense-in-depth strategies and build 
+          resilient systems that handle failures gracefully.
+        </p>
+        <ul>
+          <li>OAuth 2.0, JWT, and identity management</li>
+          <li>Input validation and SQL injection prevention</li>
+          <li>Circuit breaker and retry patterns</li>
+          <li>Comprehensive logging and monitoring</li>
+        </ul>
+      </article>
+      <article class="service-card" data-tone="teal">
+        <header>
+          <span class="service-icon"><i class="fa-solid fa-vial"></i></span>
+          <h3>Testing Excellence</h3>
+        </header>
+        <p>
+          Quality code starts with comprehensive testing. I practice TDD and
+          build robust test suites that give you confidence in every deployment.
+        </p>
+        <ul>
+          <li>Unit and Integration testing</li>
+          <li>End-to-end testing strategies</li>
+          <li>Mocking frameworks and test doubles</li>
+          <li>Behavior-driven development (BDD)</li>
+        </ul>
+      </article>
+      <article class="service-card" data-tone="emerald">
+        <header>
+          <span class="service-icon"><i class="fa-solid fa-cubes"></i></span>
+          <h3>Microservices & APIs</h3>
+        </header>
+        <p>
+          I design and implement distributed systems that scale horizontally,
+          with clear service boundaries and robust inter-service communication.
+        </p>
+        <ul>
+          <li>RESTful APIs and GraphQL endpoints</li>
+          <li>High-performance gRPC communication</li>
+          <li>Message queues and event-driven architecture</li>
+          <li>Service mesh and distributed tracing</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section
+    class="section container service-cta"
+    aria-label="Collaboration call to action"
+  >
+    <div class="service-cta-card reveal">
+      <h2>Ready to build something amazing?</h2>
+      <p>
+        I'm passionate about collaborating with teams who value quality,
+        innovation, and long-term thinking. Let's discuss how we can bring your
+        vision to life with robust, scalable software solutions.
+      </p>
+      <div class="cta-actions">
+        <button class="btn" id="collaborate-btn">Let's collaborate</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Handle the smooth scroll to contact
+    const collabBtn = document.getElementById('collaborate-btn');
+    collabBtn?.addEventListener('click', () => {
+      // If we are on the work-with-me page, redirect to home with contact hash
+      window.location.href = "/#contact";
+    });
+  </script>
+</BaseLayout>
