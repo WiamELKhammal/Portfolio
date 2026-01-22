@@ -31,35 +31,26 @@ const hasMoreExperiences = hiddenExperiences.length > 0;
         visibleExperiences.map((job) => (
           <Card hoverable class="experience-card">
             <header class="card-head">
-              <div class="meta-left">
-                {job.logo && (
-                  <div class="company-logo-wrapper">
-                    <img
-                      src={job.logo}
-                      alt={`${job.company} logo`}
-                      class="company-logo"
-                    />
-                  </div>
-                )}
-                <div class="title-meta">
-                  <h3>{job.title}</h3>
-                  <div class="meta-line">
-                    <i
-                      class="fa-sharp fa-solid fa-location-dot"
-                      aria-hidden="true"
-                    />
-                    <span>{job.location}</span>
-                  </div>
-                </div>
-              </div>
+  <div class="meta-left">
+    <div class="title-meta">
+      <h3>{job.title}</h3>
+      <div class="meta-line">
+        <i class="fa-sharp fa-solid fa-location-dot" aria-hidden="true" />
+        <span>{job.location}</span>
+      </div>
+    </div>
+  </div>
 
-              <div class="meta-right">
-                <div class="org-badge">{job.company}</div>
-                <div class="meta-date">
-                  {job.startDate} — {job.endDate}
-                </div>
-              </div>
-            </header>
+  <div class="meta-right">
+    <div class="org-badge">
+
+      <span>{job.company}</span>
+    </div>
+    <div class="meta-date">
+      {job.startDate} — {job.endDate}
+    </div>
+  </div>
+</header>
 
             <ul class="card-list">
               {job.description.map((item) => (
@@ -100,26 +91,7 @@ const hasMoreExperiences = hiddenExperiences.length > 0;
     flex: 1;
   }
 
-  .company-logo-wrapper {
-    flex-shrink: 0;
-    width: 52px;
-    height: 52px;
-    background: white;
-    border-radius: 8px; /* Slightly tighter corner */
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--border);
-    /* Shadow Removed */
-    box-shadow: none;
-  }
 
-  .company-logo {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
 
   .title-meta h3 {
     margin: 0;
@@ -128,11 +100,11 @@ const hasMoreExperiences = hiddenExperiences.length > 0;
     line-height: 1.2;
   }
 
-  /* --- Description List (Bullet Points) --- */
+
   .card-list {
-    margin: 1rem 0 1.5rem 1.5rem; /* Left margin allows bullets to breathe */
+    margin: 1rem 0 1.5rem 1.5rem; 
     padding: 0;
-    list-style-type: disc; /* Force bullet points */
+    list-style-type: disc; 
   }
 
 /* --- Description List (Bullet Points) --- */
