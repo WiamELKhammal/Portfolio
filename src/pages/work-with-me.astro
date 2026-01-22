@@ -1,12 +1,9 @@
 ---
-// src/pages/work-with-me.astro
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/services.css";
 
-// Set up page metadata
 const pageTitle = "Work with me — Wiam EL Khammal";
-const pageDescription =
-  "Collaborate with Wiam EL Khammal — Software Engineer focused on building resilient, scalable systems and clean architecture.";
+const pageDescription = "Collaborate with Wiam EL Khammal — Full-Stack Engineer specializing in Spring Boot, React, and AI-driven solutions.";
 ---
 
 <BaseLayout
@@ -14,228 +11,138 @@ const pageDescription =
   description={pageDescription}
   canonical="https://wiamelkhammal.dev/work-with-me"
 >
-  <section
-    class="hero section container service-hero"
-    aria-label="Work with me overview"
-  >
+  <section class="hero section container service-hero">
     <div class="hero-content">
       <div class="hero-tagline reveal">
         <p class="hero-quote lead-quote design-quote">
-           <span class="quote-mark open">"</span>Code is poetry, architecture is symphony.<span class="quote-mark close">"</span> 
+           <span class="quote-mark open">"</span>Turning complex logic into seamless digital reality.<span class="quote-mark close">"</span> 
         </p>
       </div>
-      <h1 class="reveal defer-on-scroll">Work with me</h1>
+      <h1 class="reveal">Engineering Impact</h1>
       <p class="muted reveal delay-1">
-        I'm a passionate Software Engineer who believes in crafting digital
-        solutions that stand the test of time. My work is guided by the
-        principles of clean architecture, high-performance optimization, and
-        designing systems that are as scalable as they are maintainable.
+        I am a Full-Stack Software Engineer focused on building robust, AI-enhanced applications. 
+        From **Spring Boot** backends to dynamic **React/Next.js** interfaces, I bridge the gap 
+        entre technical complexity and user-centric design.
       </p>
       <div class="hero-cta reveal delay-2">
-        <a class="btn" href="#approach">My approach</a>
-        <a class="btn ghost" href="/#contact">Let's collaborate</a>
+        <a class="btn" href="#expertise">View Tech Stack</a>
+        <button class="btn ghost contact-trigger">Let's collaborate</button>
       </div>
     </div>
   </section>
 
-  <section
-    id="approach"
-    class="section container service-intro"
-    aria-labelledby="approach-title"
-  >
-    <h2 id="approach-title" class="section-title reveal">
-      My development philosophy
-    </h2>
+  <section id="approach" class="section container">
+    <h2 class="section-title reveal">My Development Workflow</h2>
     <div class="service-intro-grid reveal delay-1">
       <div class="service-intro-copy">
         <p class="lead">
-          I approach software development with technical rigor and a focus on
-          sustainable solutions. My work emphasizes clean architecture, scalable
-          design, and maintainable systems that solve complex problems.
+          I leverage **Agile Scrum** methodologies to deliver high-quality code in rapid iterations. 
+          My process integrates **CI/CD pipelines** and automated testing to ensure production stability.
         </p>
         <ul class="service-commitments">
-          <li>
-            <span class="bullet"></span>Domain-driven design with clean
-            architecture principles
-          </li>
-          <li>
-            <span class="bullet"></span>Test-driven development for bulletproof
-            reliability
-          </li>
-          <li>
-            <span class="bullet"></span>Performance-first mindset with
-            continuous optimization
-          </li>
-          <li>
-            <span class="bullet"></span>Collaborative approach with clear
-            communication
-          </li>
+          <li><span class="bullet"></span><strong>Scalable Architecture:</strong> Microservices & RESTful API design.</li>
+          <li><span class="bullet"></span><strong>Modern Frontend:</strong> Responsive UI with Tailwind, Next.js, and Ant Design.</li>
+          <li><span class="bullet"></span><strong>AI Integration:</strong> Leveraging Machine Learning and PyTorch for smart features.</li>
+          <li><span class="bullet"></span><strong>Reliable DevOps:</strong> Containerization with Docker and seamless Cloud deployments.</li>
         </ul>
       </div>
       <aside class="service-intro-aside">
         <div class="service-glow-card">
-          <h3>What drives me</h3>
+          <h3>The Core Stack</h3>
           <ul>
-            <li>Building systems that developers love to work with</li>
-            <li>Solving complex problems with elegant solutions</li>
-            <li>Continuous learning and knowledge sharing</li>
-            <li>Staying at the forefront of technical innovation</li>
+            <li>Java / Spring Boot / JEE</li>
+            <li>JavaScript / TypeScript / Node.js</li>
+            <li>React / Vue.js / Next.js</li>
+            <li>Python / Scikit-learn / PyTorch</li>
           </ul>
         </div>
       </aside>
     </div>
   </section>
 
-  <section
-    id="expertise"
-    class="section container service-block"
-    aria-labelledby="expertise-title"
-  >
+  <section id="expertise" class="section container service-block">
     <div class="section-heading reveal">
-      <span class="section-kicker">Core Expertise</span>
-      <h2 id="expertise-title" class="section-title">
-        Full-Stack Software Engineering
-      </h2>
-      <p class="muted">
-        I specialize in building robust, scalable applications that solve
-        real business problems. Whether it's microservices or monolithic
-        systems, I deliver solutions designed for performance, reliability, and
-        long-term maintainability.
-      </p>
+      <span class="section-kicker">Specialized Domains</span>
+      <h2 class="section-title">Technical Expertise</h2>
     </div>
+    
     <div class="service-grid">
       <article class="service-card" data-tone="blue">
         <header>
-          <span class="service-icon"
-            ><i class="fa-solid fa-layer-group"></i></span
-          >
-          <h3>Clean Architecture & DDD</h3>
+          <span class="service-icon"><i class="fa-solid fa-desktop"></i></span>
+          <h3>Frontend Mastery</h3>
         </header>
-        <p>
-          I design systems using Domain-Driven Design principles, creating
-          maintainable codebases that reflect your business logic clearly and
-          evolve gracefully over time.
-        </p>
+        <p>Building intuitive, performant interfaces using modern JavaScript ecosystems and CSS frameworks.</p>
         <ul>
-          <li>Hexagonal architecture with clear boundaries</li>
-          <li>CQRS and Event Sourcing patterns</li>
-          <li>Strategic domain modeling</li>
-          <li>Vertical slice architecture for feature isolation</li>
+          <li>React.js, Vue.js & Next.js</li>
+          <li>Tailwind CSS & Bootstrap</li>
+          <li>State Management (Redux/Zustand)</li>
+          <li>TypeScript for Type-Safety</li>
         </ul>
       </article>
-      <article class="service-card" data-tone="cyan">
-        <header>
-          <span class="service-icon"
-            ><i class="fa-solid fa-gauge-high"></i></span
-          >
-          <h3>Performance Engineering</h3>
-        </header>
-        <p>
-          Performance isn't an afterthought—it's built into every decision. I
-          optimize at every layer, from algorithms to database queries, ensuring
-          your applications scale efficiently.
-        </p>
-        <ul>
-          <li>Memory management and resource optimization</li>
-          <li>Async/await patterns and parallel processing</li>
-          <li>Database optimization and query performance</li>
-          <li>System profiling and benchmarking</li>
-        </ul>
-      </article>
-      <article class="service-card" data-tone="indigo">
-        <header>
-          <span class="service-icon"
-            ><i class="fa-solid fa-code-branch"></i></span
-          >
-          <h3>Modern Engineering Practices</h3>
-        </header>
-        <p>
-          I stay current with the latest tech innovations, leveraging
-          cutting-edge features while maintaining stability for production systems.
-        </p>
-        <ul>
-          <li>Full-stack development lifecycle</li>
-          <li>Advanced API design patterns</li>
-          <li>Dependency injection and service lifetimes</li>
-          <li>Scalable backend infrastructure</li>
-        </ul>
-      </article>
+
       <article class="service-card" data-tone="green">
         <header>
-          <span class="service-icon"
-            ><i class="fa-solid fa-shield-halved"></i></span
-          >
-          <h3>Security & Reliability</h3>
+          <span class="service-icon"><i class="fa-solid fa-server"></i></span>
+          <h3>Backend & Security</h3>
         </header>
-        <p>
-          Security is paramount. I implement defense-in-depth strategies and build 
-          resilient systems that handle failures gracefully.
-        </p>
+        <p>Developing high-concurrency backends with a focus on security and data integrity.</p>
         <ul>
-          <li>OAuth 2.0, JWT, and identity management</li>
-          <li>Input validation and SQL injection prevention</li>
-          <li>Circuit breaker and retry patterns</li>
-          <li>Comprehensive logging and monitoring</li>
+          <li>Spring Boot & Express.js</li>
+          <li>JWT & OAuth2 Authentication</li>
+          <li>PostgreSQL, MongoDB & Firebase</li>
+          <li>Microservices & WebSockets</li>
         </ul>
       </article>
-      <article class="service-card" data-tone="teal">
+
+      <article class="service-card" data-tone="purple">
         <header>
-          <span class="service-icon"><i class="fa-solid fa-vial"></i></span>
-          <h3>Testing Excellence</h3>
+          <span class="service-icon"><i class="fa-solid fa-brain"></i></span>
+          <h3>AI & Data Science</h3>
         </header>
-        <p>
-          Quality code starts with comprehensive testing. I practice TDD and
-          build robust test suites that give you confidence in every deployment.
-        </p>
+        <p>Integrating intelligent models and data analysis into web ecosystems.</p>
         <ul>
-          <li>Unit and Integration testing</li>
-          <li>End-to-end testing strategies</li>
-          <li>Mocking frameworks and test doubles</li>
-          <li>Behavior-driven development (BDD)</li>
+          <li>Machine Learning (Scikit-learn)</li>
+          <li>Deep Learning (PyTorch)</li>
+          <li>Power BI & Data Visualization</li>
+          <li>AI-Driven API Integration</li>
         </ul>
       </article>
-      <article class="service-card" data-tone="emerald">
+
+      <article class="service-card" data-tone="orange">
         <header>
-          <span class="service-icon"><i class="fa-solid fa-cubes"></i></span>
-          <h3>Microservices & APIs</h3>
+          <span class="service-icon"><i class="fa-solid fa-vial-circle-check"></i></span>
+          <h3>Testing & DevOps</h3>
         </header>
-        <p>
-          I design and implement distributed systems that scale horizontally,
-          with clear service boundaries and robust inter-service communication.
-        </p>
+        <p>Ensuring code quality through rigorous testing and automated deployment pipelines.</p>
         <ul>
-          <li>RESTful APIs and GraphQL endpoints</li>
-          <li>High-performance gRPC communication</li>
-          <li>Message queues and event-driven architecture</li>
-          <li>Service mesh and distributed tracing</li>
+          <li>JUnit, Jest & Cypress Testing</li>
+          <li>Docker & CI/CD (GitHub Actions)</li>
+          <li>Cloud (Vercel, Azure, Render)</li>
+          <li>Postman API Documentation</li>
         </ul>
       </article>
     </div>
   </section>
 
-  <section
-    class="section container service-cta"
-    aria-label="Collaboration call to action"
-  >
+  <section class="section container service-cta">
     <div class="service-cta-card reveal">
       <h2>Ready to build something amazing?</h2>
       <p>
-        I'm passionate about collaborating with teams who value quality,
-        innovation, and long-term thinking. Let's discuss how we can bring your
-        vision to life with robust, scalable software solutions.
+        I'm looking to collaborate with teams that value technical innovation, 
+        clean code, and scalable results. Let's discuss your vision.
       </p>
       <div class="cta-actions">
-        <button class="btn" id="collaborate-btn">Let's collaborate</button>
+        <button class="btn contact-trigger">Let's collaborate</button>
       </div>
     </div>
   </section>
 
   <script>
-    // Handle the smooth scroll to contact
-    const collabBtn = document.getElementById('collaborate-btn');
-    collabBtn?.addEventListener('click', () => {
-      // If we are on the work-with-me page, redirect to home with contact hash
-      window.location.href = "/#contact";
+    document.querySelectorAll('.contact-trigger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        window.location.href = "/#contact";
+      });
     });
   </script>
 </BaseLayout>
